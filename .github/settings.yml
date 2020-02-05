@@ -1,0 +1,7 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Configure swap files on your system.
+  homepage: https://robertdebock.nl/
