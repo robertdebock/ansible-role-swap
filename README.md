@@ -2,7 +2,7 @@ swap
 =========
 
 <img src="https://docs.ansible.com/ansible-tower/3.2.4/html_ja/installandreference/_static/images/logo_invert.png" width="10%" height="10%" alt="Ansible logo" align="right"/>
-<a href="https://travis-ci.org/robertdebock/ansible-role-swap"> <img src="https://travis-ci.org/robertdebock/ansible-role-swap.svg?branch=master" alt="Build status"/></a> <img src="https://img.shields.io/ansible/role/d/"/> <img src="https://img.shields.io/ansible/quality/"/>
+<a href="https://travis-ci.org/robertdebock/ansible-role-swap"> <img src="https://travis-ci.org/robertdebock/ansible-role-swap.svg?branch=master" alt="Build status"/></a> <img src="https://img.shields.io/ansible/role/d/46284"/> <img src="https://img.shields.io/ansible/quality/46284"/>
 
 <a href="https://github.com/robertdebock/ansible-role-swap/actions"><img src="https://github.com/robertdebock/ansible-role-swap/workflows/GitHub%20Action/badge.svg"/></a>
 
@@ -112,7 +112,6 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tags|
 |---------|----|
-|alpine|all|
 |debian|all|
 |el|7, 8|
 |fedora|all|
@@ -125,6 +124,14 @@ The minimum version of Ansible required is 2.7 but tests have been done to:
 - The current version.
 - The development version.
 
+Exceptions
+----------
+
+Some variarations of the build matrix do not work. These are the variations and reasons why the build won't work:
+
+| variation                 | reason                 |
+|---------------------------|------------------------|
+| Alpine | directory /etc/security is not writable (check presence, access rights, use sudo) |
 
 
 Testing
