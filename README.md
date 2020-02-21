@@ -1,17 +1,16 @@
 swap
 =========
 
-<img src="https://docs.ansible.com/ansible-tower/3.2.4/html_ja/installandreference/_static/images/logo_invert.png" width="10%" height="10%" alt="Ansible logo" align="right"/>
-<a href="https://travis-ci.org/robertdebock/ansible-role-swap"> <img src="https://travis-ci.org/robertdebock/ansible-role-swap.svg?branch=master" alt="Build status"/></a> <img src="https://img.shields.io/ansible/role/d/46284"/> <img src="https://img.shields.io/ansible/quality/46284"/>
-
-<a href="https://github.com/robertdebock/ansible-role-swap/actions"><img src="https://github.com/robertdebock/ansible-role-swap/workflows/GitHub%20Action/badge.svg"/></a>
-
 Configure swap files on your system.
+
+|Travis|GitHub|Quality|Downloads|
+|------|------|-------|---------|
+|[![travis](https://travis-ci.org/robertdebock/ansible-role-swap.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-swap)|[![github](https://github.com/robertdebock/ansible-role-swap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-swap/actions)|![quality](https://img.shields.io/ansible/quality/46284)|![downloads](https://img.shields.io/ansible/role/d/46284)|
 
 Example Playbook
 ----------------
 
-This example is taken from `molecule/resources/playbook.yml` and is tested on each push, pull request and release.
+This example is taken from `molecule/resources/converge.yml` and is tested on each push, pull request and release.
 ```yaml
 ---
 - name: Converge
@@ -26,7 +25,7 @@ This example is taken from `molecule/resources/playbook.yml` and is tested on ea
           size: 1024
 ```
 
-The machine you are running this on, may need to be prepared, I use this playbook to ensure everything is in place to let the role work.
+The machine may need to be prepared using `molecule/resources/prepare.yml`:
 ```yaml
 ---
 - name: Converge
@@ -39,7 +38,7 @@ The machine you are running this on, may need to be prepared, I use this playboo
     - role: robertdebock.sysctl
 ```
 
-After running this role, this playbook runs to verify that everything works, this may be a good example how you can use this role.
+For verification `molecule/resources/verify.yml` run after the role has been applied.
 ```yaml
 ---
 - name: Verify
