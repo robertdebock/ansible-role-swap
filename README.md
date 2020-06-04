@@ -2,9 +2,9 @@
 
 Configure swap files on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-swap.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-swap)|[![github](https://github.com/robertdebock/ansible-role-swap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-swap/actions)|[![quality](https://img.shields.io/ansible/quality/46284)](https://galaxy.ansible.com/robertdebock/swap)|[![downloads](https://img.shields.io/ansible/role/d/46284)](https://galaxy.ansible.com/robertdebock/swap)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-swap.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-swap)|[![github](https://github.com/robertdebock/ansible-role-swap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-swap/actions)|[![quality](https://img.shields.io/ansible/quality/46284)](https://galaxy.ansible.com/robertdebock/swap)|[![downloads](https://img.shields.io/ansible/role/d/46284)](https://galaxy.ansible.com/robertdebock/swap)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-swap.svg)](https://github.com/robertdebock/ansible-role-swap/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
