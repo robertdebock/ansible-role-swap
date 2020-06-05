@@ -18,7 +18,7 @@
         path: "{{ item.path }}"
         owner: root
         group: root
-        mode: "0600"
+        mode: "600"
       loop: "{{ swap_files }}"
 
     - name: make swap file system
