@@ -1,0 +1,25 @@
+---
+- name: test if swap_swappiness is set correctly
+  assert:
+    that:
+      - swap_swappiness is defined
+      - swap_swappiness | int
+      - swap_swappiness | int => 0
+      - swap_swappiness | int =< 100
+
+- name: test if swap_files is set correctly
+  assert:
+    that:
+      - swap_files | length > 0
+      - swap_files is iterable
+  when:
+    - swap_files is defined
+
+- name: test if swap_files item is set correctly
+  assert:
+    that:
+      - item.path is defined
+      - item.path | length > 0
+      - item.size | int
+      - item.size | int > 0
+  loop: "{{ swap_files }}"
