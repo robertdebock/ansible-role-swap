@@ -22,4 +22,5 @@
       - item.path | length > 0
       - item.size | int
       - item.size | int >= 0
+    quiet: yes
   loop: "{{ swap_files }}"
