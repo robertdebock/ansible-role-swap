@@ -24,3 +24,5 @@
       - item.size | int >= 0
     quiet: yes
   loop: "{{ swap_files }}"
+  loop_control:
+    label: "{{ item.path }}"
