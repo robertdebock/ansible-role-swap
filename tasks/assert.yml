@@ -3,7 +3,7 @@
   assert:
     that:
       - swap_swappiness is defined
-      - swap_swappiness | int
+      - swap_swappiness is number
       - swap_swappiness | int >= 0
       - swap_swappiness | int <= 100
     quiet: yes
@@ -22,7 +22,7 @@
     that:
       - item.path is defined
       - item.path | length > 0
-      - item.size | int
+      - item.size is number
       - item.size | int >= 0
     quiet: yes
   loop: "{{ swap_files }}"
