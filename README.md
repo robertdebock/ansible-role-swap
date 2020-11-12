@@ -46,7 +46,7 @@ These variables are set in `defaults/main.yml`:
 # defaults file for swap
 
 # Set the swappiness, 60 is default for Fedora 31.
-swap_swappiness: "60"
+swap_swappiness: 60
 
 # A list of swap files to add. The list must container **path** (an absolute path to a file) and **size** (an integer in megabytes).
 # swap_files:
