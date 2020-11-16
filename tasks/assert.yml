@@ -4,8 +4,8 @@
     that:
       - swap_swappiness is defined
       - swap_swappiness is number
-      - swap_swappiness | int >= 0
-      - swap_swappiness | int <= 100
+      - swap_swappiness >= 0
+      - swap_swappiness <= 100
     quiet: yes
 
 - name: test if swap_files is set correctly
@@ -21,7 +21,7 @@
     that:
       - item.path is defined
       - item.size is number
-      - item.size | int >= 0
+      - item.size >= 0
     quiet: yes
   loop: "{{ swap_files }}"
   loop_control:
