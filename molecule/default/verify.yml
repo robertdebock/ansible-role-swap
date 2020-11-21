@@ -5,15 +5,9 @@
   gather_facts: no
 
   tasks:
-    - name: check if connection still works
-      ping:
-
     - name: check status of /my.swap
       stat:
         path: /my.swap
       register: swap_my_swap
-
-    - name: make assertions
-      assert:
-        that:
-          - swap_my_swap.stat.exists
+      failed_when:
+        - not swap_my_swap.stat.exists
