@@ -1,4 +1,5 @@
 ---
+
 - name: test if swap_swappiness is set correctly
   assert:
     that:
