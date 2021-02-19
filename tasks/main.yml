@@ -7,7 +7,7 @@
   delegate_to: localhost
 
 - name: set swappiness
-  sysctl:
+  ansible.posix.sysctl:
     name: vm.swappiness
     value: "{{ swap_swappiness }}"
     state: present
