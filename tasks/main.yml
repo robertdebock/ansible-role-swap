@@ -14,7 +14,7 @@
 
 - block:
     - name: make a swap file
-      command: dd if=/dev/zero of={{ item.path }} bs=1048576 count={{ item.size }}
+      ansible.builtin.command: dd if=/dev/zero of={{ item.path }} bs=1048576 count={{ item.size }}
       args:
         creates: "{{ item.path }}"
       loop: "{{ swap_files }}"
