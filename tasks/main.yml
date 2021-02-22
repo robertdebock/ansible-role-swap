@@ -20,7 +20,7 @@
       loop: "{{ swap_files }}"
 
     - name: set permission on swap file
-      file:
+      ansible.builtin.file:
         path: "{{ item.path }}"
         owner: root
         group: root
@@ -28,13 +28,13 @@
       loop: "{{ swap_files }}"
 
     - name: make swap file system
-      filesystem:
+      community.general.filesystem:
         fstype: swap
         dev: "{{ item.path }}"
       loop: "{{ swap_files }}"
 
     - name: mount swap
-      mount:
+      ansible.posix.mount:
         path: none
         src: "{{ item.path }}"
         fstype: swap
