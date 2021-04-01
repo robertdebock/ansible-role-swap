@@ -6,7 +6,7 @@
 
   tasks:
     - name: check status of /my.swap
-      stat:
+      ansible.builtin.stat:
         path: /my.swap
       register: swap_my_swap
       failed_when:
