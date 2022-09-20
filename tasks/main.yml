@@ -9,7 +9,7 @@
 - name: Set swappiness
   ansible.posix.sysctl:
     name: vm.swappiness
-    value: "{{ swap_swappiness }}"
+    value: "{{ swap_swappiness | string }}"
     state: present
 
 - block:
