@@ -47,3 +47,5 @@
   when:
     - swap_files is defined
     - swap_files | length > 0
+  notify:
+    - Run swapon
