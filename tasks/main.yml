@@ -12,7 +12,8 @@
     value: "{{ swap_swappiness }}"
     state: present
 
-- block:
+- name: Manage swap files.
+  block:
     - name: Make a swap file
       ansible.builtin.command:
         cmd: dd if=/dev/zero of={{ item.path }} bs=1048576 count={{ item.size }}
