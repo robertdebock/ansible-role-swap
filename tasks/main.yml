@@ -13,6 +13,9 @@
     state: present
 
 - name: Manage swap files.
+  when:
+    - swap_files is defined
+    - swap_files | length > 0
   block:
     - name: Make a swap file
       ansible.builtin.command:
@@ -44,8 +47,5 @@
         dump: "0"
         state: present
       loop: "{{ swap_files }}"
-  when:
-    - swap_files is defined
-    - swap_files | length > 0
   notify:
     - Run swapon
