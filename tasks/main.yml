@@ -16,6 +16,8 @@
   when:
     - swap_files is defined
     - swap_files | length > 0
+  notify:
+    - Run swapon
   block:
     - name: Make a swap file
       ansible.builtin.command:
@@ -47,5 +49,3 @@
         dump: "0"
         state: present
       loop: "{{ swap_files }}"
-  notify:
-    - Run swapon
