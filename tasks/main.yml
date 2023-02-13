@@ -24,6 +24,8 @@
         cmd: dd if=/dev/zero of={{ item.path }} bs=1048576 count={{ item.size }}
         creates: "{{ item.path }}"
       loop: "{{ swap_files }}"
+      loop_control:
+        label: "{{ item.path }}"
 
     - name: Set permission on swap file
       ansible.builtin.file:
@@ -32,12 +34,16 @@
         group: root
         mode: "600"
       loop: "{{ swap_files }}"
+      loop_control:
+        label: "{{ item.path }}"
 
     - name: Make swap file system
       community.general.filesystem:
         fstype: swap
         dev: "{{ item.path }}"
       loop: "{{ swap_files }}"
+      loop_control:
+        label: "{{ item.path }}"
 
     - name: Mount swap
       ansible.posix.mount:
