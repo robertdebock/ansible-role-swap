@@ -5,7 +5,7 @@
   gather_facts: no
 
   tasks:
-    - name: check status of /my.swap
+    - name: Check status of /my.swap
       ansible.builtin.stat:
         path: /my.swap
       register: swap_my_swap
