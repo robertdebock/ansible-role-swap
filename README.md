@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: true
 
   roles:
-    - role: robertdebock.swap
+    - role: ansible-role-swap
       swap_files:
         - path: /my.swap
           size: 1024
