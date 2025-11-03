@@ -5,4 +5,4 @@
 repository:
   description: Configure swap files on your system.
   homepage: https://robertdebock.nl/
-  topics: swap, system, ansible, molecule, tox, playbook
+  topics: swap, system, ansible, molecule, playbook
