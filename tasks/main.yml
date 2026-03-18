@@ -70,7 +70,7 @@
       ansible.builtin.command:
         cmd: swapoff --all
       when:
-        - ansible_swaptotal_mb > 0
+        - ansible_facts['swaptotal_mb'] > 0
       notify:
         - Gather facts
       changed_when: true
